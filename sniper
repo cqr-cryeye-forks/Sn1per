@@ -1920,7 +1920,7 @@ else
   echo -e "${OKGREEN}====================================================================================${RESET}"
   echo -e "$OKRED SAVING SCREENSHOTS $RESET"
   echo -e "${OKGREEN}====================================================================================${RESET}"
-  if [ ${DISTRO} == "blackarch"  ]; then
+  if [ "${DISTRO}" == "blackarch" ]; then #  if [ ${DISTRO} == "blackarch"  ]; then
     /bin/CutyCapt --url=https://$TARGET --out=$LOOT_DIR/screenshots/$TARGET-port443.jpg 2> /dev/null
   else
     cutycapt --url=https://$TARGET --out=$LOOT_DIR/screenshots/$TARGET-port443.jpg 2> /dev/null
@@ -2441,7 +2441,7 @@ fi
 echo -e "${OKGREEN}====================================================================================${RESET}"
 echo -e "$OKRED SCANNING FOR COMMON VULNERABILITIES $RESET"
 echo -e "${OKGREEN}====================================================================================${RESET}"
-if [ ${DISTRO} == "blackarch" ]; then
+if [ "${DISTRO}" == "blackarch" ]; then #if [ ${DISTRO} == "blackarch" ]; then
   /bin/yasuo -r $TARGET -b all
 else
   cd $PLUGINS_DIR/yasuo
